@@ -1,0 +1,436 @@
+/* Jogja Historia - Stylesheet Utama */
+
+:root {
+    --primary-brown: #6B4423;
+    --secondary-brown: #8B5A3C;
+    --light-brown: #C4A582;
+    --dark-brown: #3E2723;
+    --cream: #F5E6D3;
+    --gold: #D4AF37;
+    --deep-gold: #B8860B;
+}
+
+/* Gaya Dasar */
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--cream);
+    color: var(--dark-brown);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+.teks-coklat {
+    color: var(--primary-brown) !important;
+}
+
+.teks-emas {
+    color: var(--gold) !important;
+}
+
+.bg-coklat {
+    background-color: var(--primary-brown) !important;
+}
+
+.bg-emas {
+    background-color: var(--gold) !important;
+}
+
+.border-emas {
+    border-color: var(--gold) !important;
+}
+
+/* Pola Background Wayang */
+.pola-wayang {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"><text x="10" y="50" font-size="40" fill="%236B4423">☙</text><text x="60" y="80" font-size="30" fill="%236B4423">❦</text></svg>');
+    background-repeat: repeat;
+}
+
+/* Navigasi */
+.navbar {
+    background: linear-gradient(135deg, var(--primary-brown) 0%, var(--secondary-brown) 100%);
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--cream) !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.nav-link {
+    color: var(--cream) !important;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    margin: 0 5px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--gold) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 80%;
+}
+
+/* Header Halaman */
+.page-header {
+    background: linear-gradient(rgba(107, 68, 35, 0.85), rgba(62, 39, 35, 0.85));
+    padding: 20px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.page-header::before {
+    content: '☙';
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.05;
+    right: -50px;
+    top: -50px;
+    color: var(--gold);
+}
+
+/* Tombol */
+.btn-traditional {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--deep-gold) 100%);
+    color: var(--dark-brown);
+    border: 2px solid var(--dark-brown);
+    padding: 10px 25px;
+    font-weight: bold;
+    border-radius: 0;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-traditional:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    color: var(--dark-brown);
+    background: linear-gradient(135deg, var(--deep-gold) 0%, var(--gold) 100%);
+}
+
+/* Kartu */
+.kartu-tradisional {
+    background: white;
+    border: 3px solid var(--light-brown);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(107, 68, 35, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.kartu-tradisional::before,
+.kartu-tradisional::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--gold);
+    transition: all 0.3s;
+}
+
+.kartu-tradisional::before {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.kartu-tradisional::after {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.kartu-tradisional:hover {
+    box-shadow: 0 8px 25px rgba(107, 68, 35, 0.2);
+}
+
+/* Kartu Kategori */
+.kartu-kategori {
+    background: white;
+    border: 3px solid var(--light-brown);
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.kartu-kategori::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s;
+}
+
+.kartu-kategori:hover::before {
+    left: 100%;
+}
+
+.kartu-kategori:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(107, 68, 35, 0.3);
+    border-color: var(--gold);
+}
+
+.ikon-kategori {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Kartu Tempat */
+.kartu-tempat {
+    background: white;
+    border: 4px solid var(--light-brown);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.kartu-tempat::before,
+.kartu-tempat::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--gold);
+    transition: all 0.3s;
+    z-index: 1;
+}
+
+.kartu-tempat::before {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.kartu-tempat::after {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.kartu-tempat:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 40px rgba(107, 68, 35, 0.3);
+}
+
+.kartu-tempat img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.isi-kartu-tempat {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.kategori-tempat {
+    display: inline-block;
+    background: var(--primary-brown);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+/* Judul Bagian */
+.judul-bagian {
+    font-size: 2.5rem;
+    color: var(--primary-brown);
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.judul-bagian::after {
+    content: '❦';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--gold);
+    font-size: 1.8rem;
+}
+
+/* Border Dekoratif */
+.border-dekoratif {
+    border-top: 3px solid var(--light-brown);
+    border-bottom: 3px solid var(--light-brown);
+    padding: 15px 0;
+    margin: 20px 0;
+}
+
+/* Kotak Pencarian */
+.kotak-pencarian {
+    background: white;
+    border: 3px solid var(--primary-brown);
+    border-radius: 50px;
+    padding: 5px 20px;
+    box-shadow: 0 4px 15px rgba(107, 68, 35, 0.2);
+}
+
+.kotak-pencarian input {
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.kotak-pencarian button {
+    background: var(--primary-brown);
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s;
+}
+
+.kotak-pencarian button:hover {
+    background: var(--gold);
+    color: var(--dark-brown);
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(107, 68, 35, 0.85), rgba(62, 39, 35, 0.85));
+    padding: 20px 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.hero::before {
+    content: '☙';
+    position: absolute;
+    font-size: 300px;
+    opacity: 0.05;
+    right: -50px;
+    top: -50px;
+    color: var(--gold);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--dark-brown) 0%, var(--primary-brown) 100%);
+    color: var(--cream);
+    padding: 50px 0 20px;
+    margin-top: 80px;
+    border-top: 5px solid var(--gold);
+}
+
+footer a {
+    color: var(--cream);
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    color: var(--gold);
+}
+
+/* Form */
+.form-control, .form-select {
+    border: 2px solid var(--light-brown);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-header {
+        padding: 50px 0 30px;
+    }
+    
+    .judul-bagian {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+    
+    .kartu-tempat {
+        margin-bottom: 20px;
+    }
+}
+
+/* Animasi */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#gambarModal {
+    border: 4px solid var(--gold);
+}
