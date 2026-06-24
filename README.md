@@ -58,7 +58,7 @@ A web-based heritage tourism platform for exploring historical and cultural site
 git clone https://github.com/wildanrfq/jogja-historia.git
 ```
 
-Or copy the `proj3/` folder into your server's web root:
+Or copy the `jogja-historia/` folder into your server's web root:
 - XAMPP: `C:/xampp/htdocs/jogja-historia/`
 - Laragon: `C:/laragon/www/jogja-historia/`
 
@@ -97,35 +97,3 @@ The SQL dump includes a default admin account:
 |---|---|
 | Email | `admin@jogjahistoria.id` |
 | Password | `admin123` |
-
----
-
-## Project Structure
-
-```
-jogja-historia/
-├── index.php                 # Homepage with popular places and categories
-├── jelajahi.php              # Browse all places with search and filter
-├── detail_tempat.php         # Individual place detail page
-├── peta.php                  # Interactive map view
-├── acara.php                 # Events calendar
-├── rencana_perjalanan.php    # Trip itinerary builder
-├── login.php                 # Login page
-├── logout.php                # Session destroy
-├── config.php                # DB connection and helper functions
-├── instalasi.php             # DB installation helper
-├── jogja_historia.sql        # Database schema + seed data
-├── admin/
-│   ├── dashboard.php         # Admin overview
-│   ├── kelola_tempat.php     # Manage places
-│   ├── tambah_tempat.php     # Add new place
-│   ├── edit_tempat.php       # Edit existing place
-│   └── kelola_acara.php      # Manage events
-├── includes/
-│   ├── navbar.php            # Shared navigation bar
-│   ├── footer.php            # Shared footer
-│   └── proteksi_session.php  # Admin route guard
-└── assets/
-    └── css/
-        └── styles.css        # Custom styles (Javanese-themed palette)
-```
